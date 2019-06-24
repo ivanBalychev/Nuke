@@ -39,6 +39,15 @@ extension UIImageView: Nuke_ImageDisplaying {
         self.image = image
     }
 }
+
+extension UIButton:ImageDisplaying {
+
+   public func display(image: Image?) {
+        self.setImage(image, for: .normal)
+    }
+
+}
+
 #elseif os(macOS)
 import Cocoa
 /// An `NSView` that implements `ImageDisplaying` protocol.
