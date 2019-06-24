@@ -40,7 +40,7 @@ extension UIImageView: Nuke_ImageDisplaying {
     }
 }
 
-extension UIButton:Nuke_ImageDisplaying {
+extension UIButton: Nuke_ImageDisplaying {
    /// Displays an image.
     open func nuke_display(image: Image?) {
         self.setImage(image, for: .normal)
