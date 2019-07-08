@@ -148,13 +148,13 @@ extension ImagePipeline {
             self.dataLoader = dataLoader
             self.imageCache = imageCache
 
-            self.dataLoadingQueue.maxConcurrentOperationCount = 6
-            self.dataCachingQueue.maxConcurrentOperationCount = 2
-            self.imageDecodingQueue.maxConcurrentOperationCount = 1
-            self.imageEncodingQueue.maxConcurrentOperationCount = 1
-            self.imageProcessingQueue.maxConcurrentOperationCount = 2
+            self.dataLoadingQueue.maxConcurrentOperationCount = 20
+            self.dataCachingQueue.maxConcurrentOperationCount = 20
+            self.imageDecodingQueue.maxConcurrentOperationCount = 3
+            self.imageEncodingQueue.maxConcurrentOperationCount = 3
+            self.imageProcessingQueue.maxConcurrentOperationCount = 3
             #if !os(macOS)
-            self.imageDecompressingQueue.maxConcurrentOperationCount = 2
+            self.imageDecompressingQueue.maxConcurrentOperationCount = 3
             #endif
         }
     }
