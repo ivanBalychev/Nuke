@@ -67,7 +67,7 @@ extension ImagePipeline {
         ///
         /// If the value is set to `true`, you must also provide `dataCache`
         /// instance in the configuration.
-        public var isDataCachingForOriginalImageDataEnabled = true
+        public var isDataCachingForOriginalImageDataEnabled = false
 
         /// `false` by default. If `true`, the images for which one or more
         /// processors were specified will be encoded and stored in data cache.
@@ -79,7 +79,7 @@ extension ImagePipeline {
         /// stored in disk data cache if it is enabled. To avoid storing
         /// unwanted intermediate images, use `ImageProcessor.Composition` to
         /// compose multiple processors into a single one.
-        public var isDataCachingForProcessedImagesEnabled = false
+        public var isDataCachingForProcessedImagesEnabled = true
 
         /// `true` by default. If `true` the pipeline avoids duplicated work when
         /// loading images. The work only gets cancelled when all the registered
